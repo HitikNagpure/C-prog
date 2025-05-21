@@ -2,7 +2,7 @@
 
 //Write a function to calculate Percentage of a student from Marks in Science,Math & Sanskrit.
 
-int Percent(int science, int math,int sanskrit);
+float Percent(int science, int math, int sanskrit);
 
 int main(){
     int science,math,sanskrit;
@@ -12,11 +12,11 @@ int main(){
     scanf("%d", &math);
     printf("Marks in Sanskrit: ");
     scanf("%d", &sanskrit);
-    Percent(science, math, sanskrit);
-    printf("Percentage is : %d", Percent(science, math, sanskrit));
+    float percentage = Percent(science, math, sanskrit);
+    printf("Percentage is : %.2f%%\n", percentage);
     return 0;
 }
 
-int Percent(int science, int math, int sanskrit){
-    return ((science + math + sanskrit)/ 3);
+float Percent(int science, int math, int sanskrit){
+    return ((science + math + sanskrit)/ 3.0);
 }
